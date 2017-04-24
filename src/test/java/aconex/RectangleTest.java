@@ -12,4 +12,11 @@ public class RectangleTest {
 
         Assert.assertThat(rectangle.area(), is(0.0));
     }
+
+    @Test
+    public void shouldCalculatePerimeter() {
+        Rectangle rectangle = new Rectangle(2, 3);
+
+        Assert.assertThat(rectangle.perimeter(), is(10.0));
+    }
 }
