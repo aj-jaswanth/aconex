@@ -8,8 +8,16 @@ public class RectangleTest {
 
     @Test
     public void shouldBeAbleToGiveTheArea() {
-        Rectangle rectangle = new Rectangle(3,5);
-        Assert.assertEquals(15, rectangle.area(),0);
+        Assert.assertEquals(15, rectangle(3, 5).area(),0);
+    }
+
+    private Rectangle rectangle(int length, int width) {
+        return new Rectangle(length, width);
+    }
+
+    @Test
+    public void shouldBeAbleToGivePerimeter(){
+        Assert.assertEquals(16, rectangle(3, 5).perimeter(),0);
     }
 
 }

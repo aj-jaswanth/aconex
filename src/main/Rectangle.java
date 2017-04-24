@@ -18,4 +18,8 @@ public class Rectangle {
         return  length * width;
     }
 
+
+    public double perimeter() {
+        return 2*(length +width);
+    }
 }
