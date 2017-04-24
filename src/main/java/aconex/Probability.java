@@ -26,4 +26,8 @@ public class Probability {
         long temp = Double.doubleToLongBits(value);
         return (int) (temp ^ (temp >>> 32));
     }
+
+    public Probability and(Probability other) {
+        return new Probability(value * other.value);
+    }
 }
