@@ -17,6 +17,11 @@ public class ProbabilityTest {
         assertThat(p(0.3).and(p(0.3)), is(p(0.09)));
     }
 
+    @Test
+    public void shouldBeAbleToGetProbabilityOfAnyOfTheTwoEventsOccurring() {
+        assertThat(p(0.4).or(p(0.4)), is(p(0.64)));
+    }
+
     private Probability p(double value) {
         return new Probability(value);
     }
